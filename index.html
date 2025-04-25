@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="婕止">
+    <meta name="copyright" content="© 2025 婕止 版權所有">
+    <title>萬能問卷：打造你的靈性空間</title>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; background-color: #f9f9f9; }
+        h1 { color: #4a4a4a; text-align: center; }
+        h2 { color: #666; }
+        .section { background: #fff; padding: 20px; margin-bottom: 20px; border-radius: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); display: none; }
+        .section.active { display: block; }
+        label { display: block; margin: 10px 0; }
+        input, select { margin-left: 10px; padding: 5px; }
+        button { background-color: #f97316; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; }
+        button:hover { background-color: #e56300; }
+        #result { margin-top: 20px; padding: 20px; border-radius: 10px; display: none; }
+        .result-section { margin-bottom: 15px; }
+        .result-section h3 { color: #d97706; }
+        footer { text-align: center; margin-top: 20px; color: #666; font-size: 14px; }
+        .progress-bar { width: 100%; background-color: #ddd; border-radius: 5px; margin-bottom: 20px; }
+        .progress { height: 20px; background-color: #f97316; border-radius: 5px; text-align: center; color: white; }
+        .element-icon { margin-right: 5px; }
+        .role-tip { font-style: italic; color: #888; margin-bottom: 10px; }
+    </style>
+</head>
+<body>
+    <h1>萬能問卷：打造你的靈性空間</h1>
+    <p style="text-align: center;">我是粉粉，準備好打造你的靈性空間了嗎？回答時請憑直覺選吧！🐾✨</p>
+
+    <div class="progress-bar">
+        <div class="progress" id="progress" style="width: 33.33%;">第1/3步</div>
+    </div>
+
+    <div class="section active" id="section1">
+        <h2>一、關於你的小祕密</h2>
+        <p class="role-tip">粉粉：快來告訴我你的生日吧！我會幫你找到最適合的五行能量哦！🐾</p>
+        <label><span class="element-icon">📅</span>1. 你的生日是？（格式：YYYY-MM-DD，例如 1995-06-20）
+            <input type="date" id="birthdate" required>
+        </label>
+        <label><span class="element-icon">⏰</span>2. 你出生的時間？（不知道就選最接近的）
+            <select id="birthtime" required>
+                <option value="">請選擇</option>
+                <option value="4-6">🌅 清晨（4-6點）</option>
+                <option value="7-9">🌞 上午（7-9點）</option>
+                <option value="10-12">🕛 中午（10-12點）</option>
+                <option value="13-15">🌇 下午（13-15點）</option>
+                <option value="16-18">🌆 傍晚（16-18點）</option>
+                <option value="19-21">🌙 晚上（19-21點）</option>
+                <option value="22-24">🌌 深夜（22-24點）</option>
+                <option value="1-3">🌠 半夜（1-3點）</option>
+            </select>
+        </label>
+        <label><span class="element-icon">🌳🔥</span>3. 你覺得自己最像哪種自然元素？（可多選）
+            <input type="checkbox" name="element" value="wood"> 🌳 樹木（生機勃勃）<br>
+            <input type="checkbox" name="element" value="fire"> 🔥 火焰（熱情奔放）<br>
+            <input type="checkbox" name="element" value="earth"> 🪨 大地（穩重可靠）<br>
+            <input type="checkbox" name="element" value="metal"> ⚙️ 金屬（堅定清晰）<br>
+            <input type="checkbox" name="element" value="water"> 💧 水流（柔和流動）
+        </label>
+        <label><span class="element-icon">🎯</span>4. 你希望生活更強調什麼？（選3項排序）
+            <select id="priority1">
+                <option value="">第一優先</option>
+                <option value="wealth">💰 財富</option>
+                <option value="career">🏢 事業</option>
+                <option value="relationship">🤝 人際關係</option>
+                <option value="love">❤️ 愛情</option>
+                <option value="health">🏥 健康</option>
+                <option value="spirit">☯️ 心靈成長</option>
+                <option value="family">👨‍👩‍👧‍👦 家庭穩定</option>
+            </select>
+            <select id="priority2">
+                <option value="">第二優先</option>
+                <option value="wealth">💰 財富</option>
+                <option value="career">🏢 事業</option>
+                <option value="relationship">🤝 人際關係</option>
+                <option value="love">❤️ 愛情</option>
+                <option value="health">🏥 健康</option>
+                <option value="spirit">☯️ 心靈成長</option>
+                <option value="family">👨‍👩‍👧‍👦 家庭穩定</option>
+            </select>
+            <select id="priority3">
+                <option value="">第三優先</option>
+                <option value="wealth">💰 財富</option>
+                <option value="career">🏢 事業</option>
+                <option value="relationship">🤝 人際關係</option>
+                <option value="love">❤️ 愛情</option>
+                <option value="health">🏥 健康</option>
+                <option value="spirit">☯️ 心靈成長</option>
+                <option value="family">👨‍👩‍👧‍👦 家庭穩定</option>
+            </select>
+        </label>
+        <button onclick="nextSection(1)">下一頁</button>
+    </div>
+
+    <div class="section" id="section2">
+        <h2>二、你的靈性空間風格</h2>
+        <p class="role-tip">粉粉：讓我們來設計你的空間吧！你喜歡什麼顏色呢？🐾</p>
+        <label><span class="element-icon">🌈</span>1. 你喜歡的顏色風格是？（可多選）
+            <input type="checkbox" name="color" value="bright"> 🌈 明亮鮮豔<br>
+            <input type="checkbox" name="color" value="soft"> 🌸 柔和溫馨<br>
+            <input type="checkbox" name="color" value="natural"> 🌿 自然清新<br>
+            <input type="checkbox" name="color" value="modern"> 🖤 現代簡約
+        </label>
+        <label><span class="element-icon">🛁</span>2. 你希望浴室給你的感覺是？
+            <select id="bathroom">
+                <option value="">請選擇</option>
+                <option value="healing">🛁 療癒放鬆</option>
+                <option value="energy">🚿 活力清爽</option>
+                <option value="flow">🌊 流動舒緩</option>
+            </select>
+        </label>
+        <label><span class="element-icon">💡</span>3. 你喜歡的燈光是？
+            <select id="lighting">
+                <option value="">請選擇</option>
+                <option value="warm">💡 溫暖柔光</option>
+                <option value="cool">🌟 清涼明亮</option>
+                <option value="focus">🔦 聚焦聚光</option>
+            </select>
+        </label>
+        <label><span class="element-icon">🪑</span>4. 你喜歡的家具風格是？
+            <select id="furniture">
+                <option value="">請選擇</option>
+                <option value="stable">🪑 穩重厚實</option>
+                <option value="light">🛋️ 輕盈流線</option>
+                <option value="wooden">🪵 自然木質</option>
+            </select>
+        </label>
+        <label><span class="element-icon">🌿</span>5. 你想在空間放什麼植物？
+            <select id="plant">
+                <option value="">請選擇</option>
+                <option value="succulent">🌵 矮壯多肉</option>
+                <option value="slim">🌾 纖細綠植</option>
+                <option value="aquatic">🌺 水生植物</option>
+            </select>
+        </label>
+        <label><span class="element-icon">🧘‍♀️</span>6. 你希望做什麼靈性活動？
+            <select id="activity">
+                <option value="">請選擇</option>
+                <option value="meditation">🧘‍♀️ 冥想</option>
+                <option value="ritual">🕯️ 小儀式</option>
+                <option value="affirmation">📝 每日肯定</option>
+            </select>
+        </label>
+        <button onclick="previousSection(2)">上一頁</button>
+        <button onclick="nextSection(2)">下一頁</button>
+    </div>
+
+    <div class="section" id="section3">
+        <h2>三、進階小問題（選填）</h2>
+        <p class="role-tip">粉粉：如果有特別的需求，也可以告訴我哦！🐾</p>
+        <label><span class="element-icon">⚡</span>1. 你覺得自己缺少什麼能量？
+            <input type="text" id="missing_energy" placeholder="例如活力、穩定等">
+        </label>
+        <label><span class="element-icon">🧭</span>2. 你希望空間強調哪個方向？
+            <input type="text" id="direction" placeholder="例如東方助事業">
+        </label>
+        <button onclick="previousSection(3)">上一頁</button>
+        <button onclick="generateDesign()">提交問卷，生成設計！</button>
+    </div>
+
+    <div id="result"></div>
+
+    <div id="dailyCardSection" style="margin-top: 20px;">
+        <h2>每日特典卡</h2>
+        <p>LeLe祈穹：想知道今天的靈性任務嗎？點擊下方抽一張特典卡吧！🌌</p>
+        <button onclick="drawSpecialCard()">抽取今日特典卡</button>
+        <div id="specialCardResult"></div>
+    </div>
+
+    <footer>
+        <p>© 2025 婕止 版權所有。未經許可不得複製或修改。本問卷由小確生成，設計靈感源自《祈瑞祥居》。</p>
+    </footer>
+
+    <script>
+        let currentSection = 1;
+        let maxElement = '';
+        let missingElements = [];
+
+        function nextSection(section) {
+            if (section === 1) {
+                const birthdate = document.getElementById('birthdate').value;
+                const birthtime = document.getElementById('birthtime').value;
+                const elements = Array.from(document.querySelectorAll('input[name="element"]:checked')).map(el => el.value);
+                const priorities = [
+                    document.getElementById('priority1').value,
+                    document.getElementById('priority2').value,
+                    document.getElementById('priority3').value
+                ].filter(Boolean);
+                if (!birthdate || !birthtime || elements.length === 0 || priorities.length < 3) {
+                    alert('請至少填寫生日、出生時間、自然元素和三個生活優先項！');
+                    return;
+                }
+            }
+            document.getElementById(`section${section}`).classList.remove('active');
+            document.getElementById(`section${section + 1}`).classList.add('active');
+            currentSection = section + 1;
+            updateProgress();
+        }
+
+        function previousSection(section) {
+            document.getElementById(`section${section}`).classList.remove('active');
+            document.getElementById(`section${section - 1}`).classList.add('active');
+            currentSection = section - 1;
+            updateProgress();
+        }
+
+        function updateProgress() {
+            const progress = document.getElementById('progress');
+            progress.style.width = `${(currentSection / 3) * 100}%`;
+            progress.textContent = `第${currentSection}/3步`;
+        }
+
+        function calculateFiveElements(birthdate, birthtime, elements, priorities, colors, bathroom, lighting, furniture, plant, activity) {
+            let fiveElements = { wood: 0, fire: 0, earth: 0, metal: 0, water: 0 };
+            let missing = [];
+
+            const year = new Date(birthdate).getFullYear();
+            const baseElement = (year % 5 === 0) ? 'metal' : (year % 5 === 1) ? 'water' : (year % 5 === 2) ? 'wood' : (year % 5 === 3) ? 'fire' : 'earth';
+            fiveElements[baseElement] += 2;
+
+            const timeMap = {
+                '4-6': 'wood', '7-9': 'fire', '10-12': 'earth',
+                '13-15': 'fire', '16-18': 'earth', '19-21': 'water',
+                '22-24': 'water', '1-3': 'metal'
+            };
+            fiveElements[timeMap[birthtime]] += 1;
+
+            elements.forEach(el => fiveElements[el] += 1);
+
+            const priorityMap = {
+                'wealth': 'earth', 'career': 'fire', 'relationship': 'fire',
+                'love': 'water', 'health': 'wood', 'spirit': 'water', 'family': 'earth'
+            };
+            priorities.forEach(p => fiveElements[priorityMap[p]] += 1);
+
+            if (colors.includes('bright')) fiveElements.fire += 1;
+            if (colors.includes('soft')) fiveElements.earth += 1;
+            if (colors.includes('natural')) fiveElements.wood += 1;
+            if (colors.includes('modern')) fiveElements.metal += 1;
+            if (bathroom === 'healing' || bathroom === 'flow') fiveElements.water += 1;
+            if (bathroom === 'energy') fiveElements.fire += 1;
+            if (lighting === 'warm') fiveElements.fire += 1;
+            if (lighting === 'cool') fiveElements.water += 1;
+            if (lighting === 'focus') fiveElements.metal += 1;
+            if (furniture === 'stable') fiveElements.earth += 1;
+            if (furniture === 'light' || furniture === 'wooden') fiveElements.wood += 1;
+            if (plant === 'succulent') fiveElements.earth += 1;
+            if (plant === 'slim') fiveElements.wood += 1;
+            if (plant === 'aquatic') fiveElements.water += 1;
+            if (activity === 'meditation') fiveElements.water += 1;
+            if (activity === 'ritual') fiveElements.fire += 1;
+            if (activity === 'affirmation') fiveElements.metal += 1;
+
+            const max = Object.entries(fiveElements).reduce((a, b) => a[1] > b[1] ? a : b)[0];
+
+            Object.entries(fiveElements).forEach(([element, score]) => {
+                if (score === 0) missing.push(element);
+            });
+
+            return { maxElement: max, missingElements: missing };
+        }
+
+        function calculateLifeGua(birthYear) {
+            const yearSum = String(birthYear).split('').reduce((sum, digit) => sum + parseInt(digit), 0);
+            let guaNumber = yearSum % 9 || 9;
+            const guaMap = {
+                1: '坎卦（東四命）', 2: '坤卦（西四命）', 3: '震卦（東四命）',
+                4: '巽卦（東四命）', 5: '坤卦（西四命）', 6: '乾卦（西四命）',
+                7: '兌卦（西四命）', 8: '艮卦（西四命）', 9: '離卦（東四命）'
+            };
+            const directions = {
+                '東四命': '適合東、東南、北、東北方位',
+                '西四命': '適合西、西南、南、西北方位'
+            };
+            const guaName = guaMap[guaNumber];
+            const direction = directions[guaName.includes('東四命') ? '東四命' : '西四命'];
+            return { guaName, direction };
+        }
+
+        const spiritualCards = [
+            { element: 'water', role: 'LeLe祈穹', front: '星河下的靜謐之夜', back: '星語：讓心如水般平靜，今晚在藍色星光下冥想吧。🌌', rune: '水元素符文：流動帶來平靜。💧' },
+            { element: 'water', role: 'LeLe祈穹', front: '月光下的湖泊倒影', back: '星語：感受水的靈動，閉上眼想像湖水的波動。🌙', rune: '水元素符文：靈動洗淨疲憊。💧' },
+            { element: 'fire', role: '小確', front: '橙色星光的冒險', back: '小確：點燃一盞橙色蠟燭，開啟今天的行動吧！🛎️', rune: '火元素符文：熱情點燃你的動力。🔥' },
+            { element: 'fire', role: '小確', front: '星火燎原的挑戰', back: '小確：今天試著做一件新的事，火元素會支持你！🛎️', rune: '火元素符文：行動帶來改變。🔥' },
+            { element: 'wood', role: '粉粉', front: '森林中的微光小屋', back: '粉粉：今天讓我陪你吧！感受大自然的擁抱，你會更有活力哦！🐾', rune: '木元素符文：生機環繞你。🌳' },
+            { element: 'wood', role: '粉粉', front: '綠葉間的溫暖陽光', back: '粉粉：深呼吸，感受木元素的生機，你是最棒的！🐾', rune: '木元素符文：成長從內心開始。🌳' },
+            { element: 'earth', role: '麒麟', front: '大地之盾的守護', back: '麒麟：我會守護你，今天讓土元素帶給你穩定感。🏯', rune: '土元素符文：穩定是你的力量。🪨' },
+            { element: 'earth', role: '木雞', front: '陶土小屋的溫暖', back: '木雞：靜下來吧，土元素會滋養你的心靈。🏯', rune: '土元素符文：溫暖環繞你。🪨' },
+            { element: 'metal', role: '神火燈', front: '星空下的金屬光芒', back: '神火燈：讓金元素幫你聚焦，今天會很有成效哦！🏯', rune: '金元素符文：清晰指引你的方向。⚙️' }
+        ];
+
+        const specialCards = [
+            { theme: '生機復甦系', element: 'wood', front: '綠意盎然的清晨', back: '今日任務：在空間角落放一盆綠植，讓生機環繞你。', suggestion: '增強木元素，帶來活力。' },
+            { theme: '成長蛻變系', element: 'wood', front: '樹苗破土的希望', back: '今日任務：寫下一個小目標，讓木元素助你實現。', suggestion: '增強木元素，支持成長。' },
+            { theme: '熱情燃燒系', element: 'fire', front: '橙色星火的激情', back: '今日任務：點燃一盞橙色蠟燭，感受熱情驅動你前行。', suggestion: '增強火元素，提升行動力。' },
+            { theme: '創意火花系', element: 'fire', front: '星火點燃的靈感', back: '今日任務：在靈性空間畫一幅畫，讓創意之火燃燒。', suggestion: '增強火元素，激發靈感。' },
+            { theme: '穩定根基系', element: 'earth', front: '陶土之地的安穩', back: '今日任務：在空間中央放一塊陶土裝飾，感受大地的穩重。', suggestion: '增強土元素，帶來安全感。' },
+            { theme: '滋養溫暖系', element: 'earth', front: '大地母親的擁抱', back: '今日任務：喝一杯溫暖的花茶，讓土元素滋養你的內心。', suggestion: '增強土元素，療癒心靈。' },
+            { theme: '清晰聚焦系', element: 'metal', front: '金屬星光的聚焦', back: '今日任務：整理你的靈性空間，讓金元素帶來秩序。', suggestion: '增強金元素，提升專注力。' },
+            { theme: '堅定決心系', element: 'metal', front: '銀白光芒的決心', back: '今日任務：寫下今日計劃，金元素助你堅定執行。', suggestion: '增強金元素，強化決心。' },
+            { theme: '流動釋放系', element: 'water', front: '流水輕撫的釋放', back: '今日任務：在空間放一小盆水，讓流水帶走你的疲憊。', suggestion: '增強水元素，釋放壓力。' },
+            { theme: '平靜冥想系', element: 'water', front: '湖面星光的寧靜', back: '今日任務：靜坐冥想，感受水元素的靈動與安寧。', suggestion: '增強水元素，促進平靜。' }
+        ];
+
+        function drawRoleCard(maxElement) {
+            const filteredCards = spiritualCards.filter(card => card.element === maxElement);
+            const randomCard = filteredCards[Math.floor(Math.random() * filteredCards.length)];
+            const cardHTML = `
+                <div class="card" style="border: 1px solid #ddd; padding: 10px; margin-top: 10px; position: relative;">
+                    <div class="card-front" style="cursor: pointer;" onclick="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                        <p>${randomCard.role}：${randomCard.front}</p>
+                    </div>
+                    <div class="card-back" style="display: none;">
+                        <p>${randomCard.back}</p>
+                        <p><strong>符文彩蛋</strong>：${randomCard.rune}</p>
+                    </div>
+                </div>
+            `;
+            document.getElementById('roleCardResult').innerHTML = cardHTML;
+        }
+
+        function drawSpecialCard() {
+            let filteredCards = specialCards;
+            if (missingElements.length > 0) {
+                filteredCards = specialCards.filter(card => missingElements.includes(card.element));
+            }
+            const today = new Date().getDate();
+            const randomIndex = (today % filteredCards.length);
+            const card = filteredCards[randomIndex];
+            const cardHTML = `
+                <div class="card" style="border: 1px solid #ddd; padding: 10px; margin-top: 10px;">
+                    <p><strong>${card.theme}</strong>：${card.front}</p>
+                    <p>${card.back}</p>
+                    <p><strong>建議</strong>：${card.suggestion}</p>
+                </div>
+            `;
+            document.getElementById('specialCardResult').innerHTML = cardHTML;
+        }
+
+        function generateDesign() {
+            const birthdate = document.getElementById('birthdate').value;
+            const birthtime = document.getElementById('birthtime').value;
+            const elements = Array.from(document.querySelectorAll('input[name="element"]:checked')).map(el => el.value);
+            const priorities = [
+                document.getElementById('priority1').value,
+                document.getElementById('priority2').value,
+                document.getElementById('priority3').value
+            ].filter(Boolean);
+            const colors = Array.from(document.querySelectorAll('input[name="color"]:checked')).map(el => el.value);
+            const bathroom = document.getElementById('bathroom').value;
+            const lighting = document.getElementById('lighting').value;
+            const furniture = document.getElementById('furniture').value;
+            const plant = document.getElementById('plant').value;
+            const activity = document.getElementById('activity').value;
+            const missingEnergy = document.getElementById('missing_energy').value;
+            const direction = document.getElementById('direction').value;
+
+            if (!birthdate || !birthtime || elements.length === 0 || priorities.length < 3) {
+                alert('請至少填寫生日、出生時間、自然元素和三個生活優先項！');
+                return;
+            }
+
+            const resultData = calculateFiveElements(birthdate, birthtime, elements, priorities, colors, bathroom, lighting, furniture, plant, activity);
+            maxElement = resultData.maxElement;
+            missingElements = resultData.missingElements;
+            const { guaName, direction } = calculateLifeGua(new Date(birthdate).getFullYear());
+
+            const elementColors = {
+                wood: '自然綠色系（如翡翠綠）',
+                fire: '溫暖紅橙系（如琥珀橙）',
+                earth: '柔和土黃系（如砂黃）',
+                metal: '現代金屬灰白系（如珍珠白）',
+                water: '清新藍黑系（如湖藍）'
+            };
+            const elementMaterials = {
+                wood: '木質與藤製',
+                fire: '織品與陶器',
+                earth: '陶土與石材',
+                metal: '金屬與玻璃',
+                water: '玻璃與水晶'
+            };
+            const elementAtmospheres = {
+                wood: '生機盎然的森林氛圍，點綴微光粒子',
+                fire: '溫暖如星光的夢幻氛圍，帶橙色光暈',
+                earth: '穩重溫馨的大地氛圍，散發柔和光芒',
+                metal: '簡約現代的星空氛圍，帶銀白微光',
+                water: '流動如水的靈動氛圍，點綴藍色星塵'
+            };
+            const backgroundColors = {
+                wood: '#e6f4ea',
+                fire: '#fef3e7',
+                earth: '#f9f3e6',
+                metal: '#f0f4f8',
+                water: '#e6f2fa'
+            };
+            const elementIcons = {
+                wood: '🌳',
+                fire: '🔥',
+                earth: '🪨',
+                metal: '⚙️',
+                water: '💧'
+            };
+
+            let missingElementsText = '';
+            if (missingElements.length > 0) {
+                const missingSuggestions = {
+                    wood: '建議加入木元素，例如自然綠色系裝飾或纖細綠植。',
+                    fire: '建議加入火元素，例如溫暖紅橙系裝飾或橙色星光蠟燭。',
+                    earth: '建議加入土元素，例如柔和土黃系裝飾或陶土材質。',
+                    metal: '建議加入金元素，例如現代金屬灰白系裝飾或金屬小物。',
+                    water: '建議加入水元素，例如清新藍黑系裝飾或水生植物。'
+                };
+                missingElementsText = missingElements.map(el => missingSuggestions[el]).join('<br>');
+            }
+
+            const directionSuggestions = {
+                wood: '建議在此方位放置木質家具或綠植，增強生機。',
+                fire: '建議在此方位點燃橙色星光蠟燭，增添熱情。',
+                earth: '建議在此方位放置陶土裝飾，增強穩定感。',
+                metal: '建議在此方位放置金屬小物，提升清晰能量。',
+                water: '建議在此方位放置水晶或藍色裝飾，促進流動感。'
+            };
+
+            const result = `
+                <div class="result-section">
+                    <h3><span class="element-icon">🌟</span>你的靈性空間設計</h3>
+                    <p><strong>空間氛圍</strong>：${elementAtmospheres[maxElement]}</p>
+                </div>
+                <div class="result-section">
+                    <h3><span class="element-icon">🌈</span>主色調</h3>
+                    <p>${elementColors[maxElement]}</p>
+                </div>
+                <div class="result-section">
+                    <h3><span class="element-icon">🛁</span>療癒浴室</h3>
+                    <p>${elementMaterials[maxElement]}材質，${bathroom === 'healing' ? '療癒風，搭配橙色星光蠟燭' : bathroom === 'energy' ? '活力風，點綴紅色小物' : '流動風，加入水晶裝飾'}</p>
+                </div>
+                <div class="result-section">
+                    <h3><span class="element-icon">💡</span>星光燈火</h3>
+                    <p>${lighting === 'warm' ? '溫暖柔光，模擬星光點點' : lighting === 'cool' ? '清涼明亮，帶微藍星塵' : '聚焦聚光，如星芒聚焦'}（${elementColors[maxElement]}搭配）</p>
+                </div>
+                <div class="result-section">
+                    <h3><span class="element-icon">🪑</span>靈性家具</h3>
+                    <p>${furniture === 'stable' ? '穩重厚實，陶土質感' : furniture === 'light' ? '輕盈流線，木質雕花' : '自然木質，帶星光符文'}，${elementMaterials[maxElement]}</p>
+                </div>
+                <div class="result-section">
+                    <h3><span class="element-icon">🌿</span>療癒植物</h3>
+                    <p>${plant === 'succulent' ? '矮壯多肉，陶盆點綴橙色星石' : plant === 'slim' ? '纖細綠植，木盆搭配星光微塵' : '水生植物，水晶盆散發微光'}</p>
+                </div>
+                <div class="result-section">
+                    <h3><span class="element-icon">🧘‍♀️</span>靈性活動</h3>
+                    <p>${activity === 'meditation' ? '冥想：靜坐於星光燈下，感受能量流動' : activity === 'ritual' ? '小儀式：點燃橙色星光蠟燭，許下心願' : '每日肯定：在星光平台寫下感恩語'}</p>
+                </div>
+                ${missingElementsText ? `<div class="result-section"><h3><span class="element-icon">⚡</span>補充缺少的五行</h3><p>${missingElementsText}</p></div>` : ''}
+                <div class="result-section">
+                    <h3><span class="element-icon">🧭</span>命卦與方位建議</h3>
+                    <p>你的命卦為${guaName}，${direction}。<br>${directionSuggestions[maxElement]}</p>
+                </div>
+                <div class="result-section">
+                    <h3><span class="element-icon">🎴</span>角色指引卡</h3>
+                    <p>小確：想知道今天的指引嗎？點擊下方抽一張卡吧！🛎️</p>
+                    <button onclick="drawRoleCard('${maxElement}')">抽取角色指引卡</button>
+                    <div id="roleCardResult"></div>
+                </div>
+            `;
+
+            const resultDiv = document.getElementById('result');
+            resultDiv.innerHTML = result;
+            resultDiv.style.display = 'block';
+            resultDiv.style.backgroundColor = backgroundColors[maxElement];
+            document.getElementById('dailyCardSection').style.display = 'block';
+        }
+    </script>
+</body>
+</html>
